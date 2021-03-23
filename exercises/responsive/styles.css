@@ -1,0 +1,50 @@
+* {
+  font-family: monospace;
+  background-size: 100px;
+}
+
+body {
+  background-color: #454255;
+}
+
+@media only screen and (min-width: 0) {
+  body {
+    background-image: url("bookopen1.png");
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    background-image: url("bookopen11.png");
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  body {
+    background-image: url("bookopen2.png");
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-image: url("bookopen3.png");
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  body {
+    background-image: url("bookopen4.png");
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    background-image: url("bookopen5.png");
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  body {
+    background-image: url("bookopen6.png");
+  }
+}
