@@ -75,10 +75,101 @@ let projectArray = [
       link: "assets/Globalist_Spring2021_Adaptation_Print.pdf"
       }
     ]
-  }
+  },
+  {
+    name: "Thesis Shows 2021",
+    description: "",
+    embed: "https://thesisshows2021.com",
+    images: [
+      {
+      src: "",
+      title: "",
+      caption: "",
+      link: null
+      }
+    ]
+  },
+  {
+    name: "Kalliope 2019",
+    description: "",
+    embed: "",
+    images: [
+      {
+      src: "",
+      title: "",
+      caption: "",
+      link: null
+      }
+    ]
+  },
+  {
+    name: "CourseTable",
+    description: "",
+    embed: "https://coursetable.com",
+    images: [
+      {
+      src: "",
+      title: "",
+      caption: "",
+      link: null
+      }
+    ]
+  },
+  {
+    name: "Two Bird Press",
+    description: "",
+    embed: "",
+    images: [
+      {
+      src: "",
+      title: "",
+      caption: "",
+      link: null
+      }
+    ]
+  },
+  {
+    name: "Hope in a Box",
+    description: "",
+    embed: "",
+    images: [
+      {
+      src: "",
+      title: "",
+      caption: "",
+      link: null
+      }
+    ]
+  },
+  {
+    name: "Jewelry",
+    description: "",
+    embed: "",
+    images: [
+      {
+      src: "",
+      title: "",
+      caption: "",
+      link: null
+      }
+    ]
+  },
+  {
+    name: "Street Treats",
+    description: "",
+    embed: "https://s-dney.github.io/street-treats/",
+    images: [
+      {
+      src: "",
+      title: "",
+      caption: "",
+      link: null
+      }
+    ]
+  },
 ]
 
-projectArray.forEach(project => {
+projectArray.sort((a, b) => (a.name > b.name ? 1 : -1)).forEach(project => {
   addToSidebar(project)
 })
 
@@ -88,7 +179,11 @@ function addToSidebar(project) {
   projectList.appendChild(li)
   li.style.cursor = "pointer"
   li.addEventListener('click', (e) => {
+    projectList.children.forEach(item => {
+      item.style.textDecoration = "none"
+    })
     displayProject(project)
+    li.style.textDecoration = "line-through"
   })
 }
 
@@ -104,7 +199,7 @@ function displayProject(project) {
     let object = document.createElement("object")
     object.data = project.embed
     object.width = "100%"
-    object.height = "100%"
+    object.height = "80%"
     let embed = document.createElement("embed")
     embed.src = project.embed
     
@@ -131,23 +226,20 @@ function displayProject(project) {
 }
 
 function setup() {
-
-}
-
-
-function setup() {
-  var canvas = createCanvas(710, 400)
-  canvas.parent(mainWindow)
+  var canvas = createCanvas(window.innerWidth, window.innerHeight * .9);
+  canvas.parent(document.body);
   noStroke();
   rectMode(CENTER); 
 }
 
 function draw() {
   background(255);
-  fill(244, 122, 158);
-  rect(mouseX, height / 2, mouseY / 2 + 10, mouseY / 2 + 10);
-  fill(237, 34, 93);
+  fill(244, 122, 158, 50);
+  ellipse(mouseX, height / 2, mouseY / 2 + 10, mouseY / 2 + 10);
+  ellipse(mouseX * 2, height / 3, mouseY / 2 + 10, mouseY / 2 + 10);
+  fill(237, 34, 93, 50);
   let inverseX = width - mouseX;
   let inverseY = height - mouseY;
-  rect(inverseX, height / 2, inverseY / 2 + 10, inverseY / 2 + 10);
+  ellipse(inverseX, height / 2, inverseY / 2 + 10, inverseY / 2 + 10);
+  ellipse(inverseX * 2, height / 2.5, inverseY / 3 + 10, inverseY / 3 + 10);
 }

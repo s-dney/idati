@@ -4,6 +4,7 @@
 
 body {
   /* background-color: gray; */
+
 }
 
 ul {
@@ -31,8 +32,19 @@ h1, h2, h3 {
   margin-left: 70px;
   margin-top: 40px;
 }
-.header {
+/* .header {
   height: 150px;
+} */
+
+hr {
+  border: none;
+  border-top: 0.5px solid black;
+
+  
+}
+
+.spacer {
+  width: 100px;
 }
 
 .wrapper {
