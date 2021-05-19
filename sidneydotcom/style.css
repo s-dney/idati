@@ -17,6 +17,7 @@ ul li, p{
   color: gray;
   font-family: 'neue-haas-grotesk-text';
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 h1 {

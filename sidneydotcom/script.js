@@ -177,7 +177,7 @@ function addToSidebar(project) {
   let li = document.createElement('li')
   li.innerText = project.name
   projectList.appendChild(li)
-  li.style.cursor = "pointer"
+  // li.style.cursor = "pointer"
   li.addEventListener('click', (e) => {
     projectList.children.forEach(item => {
       item.style.textDecoration = "none"
